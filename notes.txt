@@ -1,0 +1,110 @@
+- now: Timestamp of the current event (Unix time in milliseconds).
+  Example: "now": 1738120615880
+
+- wBACPI: List of player IDs who need to act.
+  Example: "wBACPI": ["LVBLJp2cfJ"]
+
+- eventsData: List of game events (usually empty).
+  Example: "eventsData": []
+
+- sNA: Current game state.
+  Example: "sNA": "FCPFS" (Flop, Turn, or River phase start)
+
+- sNAA: Next action timestamp.
+  Example: "sNAA": 1738120616680
+
+- pGS: Player game states (e.g., fold, in-game).
+  Example: "pGS": {"jJJXR2XCer": "fold"}
+
+- pITT: Player in turn to act.
+  Example: "pITT": "jJJXR2XCer"
+
+- pre: Previous event timestamp.
+  Example: "pre": 1738120490589
+
+- mEV: Unknown (always 0, possibly min expected value).
+  Example: "mEV": 0
+
+- fV: Game version.
+  Example: "fV": "0.1.72"
+
+- sN: Server timestamp.
+  Example: "sN": 1738120610664
+
+- gT: Game type/status.
+  Example: "gT": [1, 5]
+
+- players: Player stacks and wins.
+  Example: "players": {"jJJXR2XCer": {"stack": 50}, "LVBLJp2cfJ": {"stack": 150}}
+
+- tB: Total bets per player.
+  Example: "tB": {"LVBLJp2cfJ": 20}
+
+- gameResult: Who won & how much they gained.
+  Example: "gameResult": {"LVBLJp2cfJ": {"gained": 20, "position": 1}}
+
+- cPI: Current player in action.
+  Example: "cPI": "jJJXR2XCer"
+
+- nR: Round number.
+  Example: "nR": [1]
+
+- pC: Players' hole cards and hand strength.
+  Example: "pC": {"jJJXR2XCer": {"name1": "two pair (Q,9)"}}
+
+- oTC: Open table cards (community cards).
+  Example: "oTC": {"1": ["2h", "9c", "Ks", "Qs", "6d"]}
+
+- pTB: Pending table bets.
+  Example: "pTB": {}
+
+- rHP: Round hand progress.
+  Example: "rHP": []
+
+- cRPI: Current raise information.
+  Example: "cRPI": ["LVBLJp2cfJ"]
+
+- sBS: Small blind size.
+  Example: "sBS": 2
+
+- gN: Game number (hand ID).
+  Example: "gN": 350
+
+- hI: Hand identifier.
+  Example: "hI": "lc3l5lbgcgb0"
+
+- dealerID: Dealer's player ID.
+  Example: "dealerID": "LVBLJp2cfJ"
+
+- dealerSeat: Dealer's seat number.
+  Example: "dealerSeat": 2
+
+- sBPI: Small blind player ID.
+  Example: "sBPI": "LVBLJp2cfJ"
+
+- bBPI: Big blind player ID.
+  Example: "bBPI": "jJJXR2XCer"
+
+- pASA: Action start timestamp.
+  Example: "pASA": 1738120514351
+
+- mAVTB: Max available table bet.
+  Example: "mAVTB": 40
+
+- dLTWoTB: Deadline to wager on table.
+  Example: "dLTWoTB": 1738120534351
+
+- dLTWTB: Deadline to wait on table.
+  Example: "dLTWTB": 1738120544351
+
+- pot: Total pot size.
+  Example: "pot": 80
+
+- cHB: Current hand bet (total bet in this round).
+  Example: "cHB": 20
+
+- mR: Minimum raise.
+  Example: "mR": 40
+
+- rHC: Possibly round history cache (always null).
+  Example: "rHC": null

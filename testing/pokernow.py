@@ -18,7 +18,7 @@ WEB_SOCKET_URL_PATTERN = 'wss://www.pokernow.club/socket.io/?gameID=${game_id}&E
 TAKE_SEAT_URL = 'https://www.pokernow.club/games/${game_id}/request_ingress'
 
 
-class PokernowClient:
+class PokerNowClient:
     def __init__(self, game_id, cookies, name='BOT_' + str(time.time())[-8:], initial_stack=2000, seat=9):
         self.game_id = game_id
         self.cookies = cookies  # Use both npt and apt cookies
@@ -125,6 +125,6 @@ if __name__ == '__main__':
         f'apt={apt_key}; '
     )
 
-    client = PokernowClient(game_id=GAME_ID, cookies=COOKIES)
+    client = PokerNowClient(game_id=GAME_ID, cookies=COOKIES)
     client.connect_room(GAME_ID)
     client.run()

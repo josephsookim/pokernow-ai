@@ -84,7 +84,8 @@ class PokerNowClient:
                 if 'seats' in json_obj[1]:
                     self.seats = get_seats(json_obj[1])
 
-            print(self.seats)
+                if 'pITT' in json_obj[1] and json_obj[1]['pITT'] is not None:
+                    print(get_player_in_turn(json_obj[1]))
 
     def connect_room(self, game_id):
         '''Establish a WebSocket connection to the PokerNow game.'''

@@ -3,10 +3,6 @@ import websocket
 import ssl
 import time
 import threading
-import requests
-
-# Helper Functions
-from services.helpers import *
 
 WEB_SOCKET_URL_PATTERN = 'wss://www.pokernow.club/socket.io/?gameID=${game_id}&EIO=3&transport=websocket'
 

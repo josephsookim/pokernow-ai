@@ -56,14 +56,11 @@ class PokerNowClient:
 
     def handle_message(self, raw_message):
         '''Process received WebSocket messages.'''
-        # print(raw_message)
         if raw_message.startswith('0'):
             message = raw_message[1:]
             json_obj = json.loads(message)
-            # print(json_obj)
             self.ping_interval = json_obj.get('pingInterval', 20000)
             self.ping()
-            # print(f'Self player ID: {self.self_player_id}')
 
         elif raw_message.startswith('42'):
             message = raw_message[2:]
@@ -73,7 +70,6 @@ class PokerNowClient:
 
             if 'registered' in json_obj[0]:
                 self.player_id = json_obj[1]['currentPlayer']['id']
-                print(self.player_id)
 
     def connect_room(self, game_id):
         '''Establish a WebSocket connection to the PokerNow game.'''

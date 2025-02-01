@@ -74,11 +74,17 @@ class PokerNowClient:
         elif raw_message.startswith('42'):
             message = raw_message[2:]
             json_obj = json.loads(message)
-            print(json_obj)
             print('=============================')
 
             if 'registered' in json_obj[0]:
                 self.player_id = json_obj[1]['currentPlayer']['id']
+                self.seats = get_seats(json_obj[1]['gameState'])
+
+            else:
+                if 'seats' in json_obj[1]:
+                    self.seats = get_seats(json_obj[1])
+
+            print(self.seats)
 
     def connect_room(self, game_id):
         '''Establish a WebSocket connection to the PokerNow game.'''

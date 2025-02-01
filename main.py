@@ -1,4 +1,4 @@
-from services.pokernow_client import PokerNowClient
+from services.pokernow import PokerNowClient
 from dotenv import load_dotenv
 import os
 
@@ -14,7 +14,7 @@ if __name__ == '__main__':
     npt_key = os.getenv('npt')
     apt_key = os.getenv('apt')
 
-    GAME_ID = 'pglf212JbH_oKbRhW_Vnwu7kM'
+    GAME_ID = 'pglCEu6SWiAfNg59eVkmL-J06'
     COOKIES = (
         f'npt={npt_key}; '
         f'apt={apt_key}; '

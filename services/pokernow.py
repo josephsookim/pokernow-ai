@@ -12,9 +12,12 @@ class PokerNowClient:
     def __init__(self, game_id, cookies):
         self.game_id = game_id
         self.cookies = cookies  # Use both npt and apt cookies
-        self.ping_interval = 20000
-        self.player_id = None
         self.ws = None
+        self.ping_interval = 20000
+
+        # Players Information
+        self.player_id = None
+        self.seats = dict()
 
         # Headers with the provided cookies
         self.headers = {

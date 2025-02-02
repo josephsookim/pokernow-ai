@@ -6,9 +6,12 @@ from services.helpers import *
 
 class PokerNowProcessor:
     def __init__(self):
-        # Players Information
+        # Player Information
         self.player_id = None
+
+        # Game State
         self.seats = dict()
+        self.player_in_turn = None
 
     def process_message(self, raw_message):
         # Game Information
@@ -29,4 +32,4 @@ class PokerNowProcessor:
             self.seats = get_seats(game_state)
 
         if 'pITT' in game_state and game_state['pITT'] is not None:
-            print(get_player_in_turn(game_state))
+            self.player_in_turn = get_player_in_turn(game_state)

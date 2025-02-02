@@ -27,7 +27,7 @@ class PokerNowProcessor:
                 self.game_state.update_seats(
                     get_seats(json_obj[1]['gameState']))
 
-            else:
+            elif 'gC' in json_obj[0]:
                 self.update_game_state(json_obj[1])
 
                 if is_hand_over(json_obj[1]):

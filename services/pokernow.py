@@ -22,8 +22,11 @@ class PokerNowProcessor:
                 self.seats = get_seats(json_obj[1]['gameState'])
 
             else:
-                if 'seats' in json_obj[1]:
-                    self.seats = get_seats(json_obj[1])
+                self.update_game_state(json_obj[1])
 
-                if 'pITT' in json_obj[1] and json_obj[1]['pITT'] is not None:
-                    print(get_player_in_turn(json_obj[1]))
+    def update_game_state(self, game_state):
+        if 'seats' in game_state:
+            self.seats = get_seats(game_state)
+
+        if 'pITT' in game_state and game_state['pITT'] is not None:
+            print(get_player_in_turn(game_state))

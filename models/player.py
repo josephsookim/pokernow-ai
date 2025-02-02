@@ -1,7 +1,7 @@
 class Player:
-    def __init__(self, id, stack):
+    def __init__(self, id):
         self.id = id
-        self.stack = stack
+        self.stack = 0
         self.hand_count = 0
         self.vpip = 0
         self.pfr = 0

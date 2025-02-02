@@ -16,7 +16,6 @@ class PokerNowProcessor:
         self.game_state = GameState()
 
     def process_message(self, raw_message):
-        # Game Information
         if raw_message.startswith('42'):
             message = raw_message[2:]
             json_obj = json.loads(message)

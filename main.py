@@ -15,7 +15,7 @@ if __name__ == '__main__':
     npt_key = os.getenv('npt')
     apt_key = os.getenv('apt')
 
-    GAME_ID = 'pglWZjE5GYa11MdbdtRxgHaj3'
+    GAME_ID = 'pglqsDF3ZUtQ1hJ1sSXxtF3uN'
     COOKIES = (
         f'npt={npt_key}; '
         f'apt={apt_key}; '

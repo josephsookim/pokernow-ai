@@ -1,4 +1,4 @@
-# **PokerNow AI
+# **PokerNow AI**
 Currently, a work in progress -> aiming to create a DeepSeek wrapper project that will suggest the best course of action, given the other players' playing styles and actions.
 
 ![Project Banner (To Be Added)](image-link)

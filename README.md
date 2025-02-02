@@ -20,7 +20,7 @@ Currently, a work in progress -> aiming to create a DeepSeek wrapper project tha
 ---
 
 ## **About the Project**
-A short introduction explaining what the project does, why it exists, and who it's for.
+To Be Added.
 
 - 🚀 **Purpose**: To Be Added.
 - 💡 **Inspiration**: To Be Added.

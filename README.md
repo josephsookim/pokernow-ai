@@ -5,7 +5,8 @@ If you'd like to follow my progress, consider starring this project.
 
 ![Project Banner (To Be Added)](image-link)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)   
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/josephsookim/pokernow-ai.svg)](https://github.com/josephsookim/pokernow-ai/graphs/contributors)
 
 ---
 

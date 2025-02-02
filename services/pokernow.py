@@ -20,7 +20,6 @@ class PokerNowProcessor:
         if raw_message.startswith('42'):
             message = raw_message[2:]
             json_obj = json.loads(message)
-            print('=============================')
 
             if 'registered' in json_obj[0]:
                 self.player_id = json_obj[1]['currentPlayer']['id']
@@ -30,8 +29,14 @@ class PokerNowProcessor:
             else:
                 self.update_game_state(json_obj[1])
 
+                if is_hand_over(json_obj[1]):
+                    print('Hand over')
+
+            print('=============================')
+
     def update_game_state(self, game_state):
         # If seats have changed, update the seats dictionary
+
         if 'seats' in game_state:
             self.game_state.update_seats(get_seats(game_state))
 

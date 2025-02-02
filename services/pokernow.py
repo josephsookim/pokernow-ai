@@ -20,6 +20,8 @@ class PokerNowProcessor:
             message = raw_message[2:]
             json_obj = json.loads(message)
 
+            print(json_obj)
+
             if 'registered' in json_obj[0]:
                 self.player_id = json_obj[1]['currentPlayer']['id']
                 self.game_state.update_seats(

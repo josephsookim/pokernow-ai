@@ -28,8 +28,10 @@ class PokerNowProcessor:
                 self.update_game_state(json_obj[1])
 
     def update_game_state(self, game_state):
+        # If seats have changed, update the seats dictionary
         if 'seats' in game_state:
             self.seats = get_seats(game_state)
 
+        # If the player in turn has changed, update the player in turn
         if 'pITT' in game_state and game_state['pITT'] is not None:
             self.player_in_turn = get_player_in_turn(game_state)
